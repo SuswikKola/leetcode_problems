@@ -1,12 +1,12 @@
 class Solution:
     def findValueOfPartition(self, nums: List[int]) -> int:
         nums.sort()
-        s = nums[1]-nums[0]
-        i=1
+        res = float('inf')
+        i=0
         j=i+1
         while j<len(nums):
-            t = (nums[j]-nums[i])
-            s = min(t,s)
+            if (nums[j]-nums[i])<res:
+                res = nums[j]-nums[i]
             i+=1
             j+=1
-        return s
+        return res
