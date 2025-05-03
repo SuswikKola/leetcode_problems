@@ -1,11 +1,11 @@
 class Solution:
     def findValueOfPartition(self, nums: List[int]) -> int:
         nums.sort()
-        i=0
+        s = nums[1]-nums[0]
+        i=1
         j=i+1
-        s = nums[j]-nums[i]
         while j<len(nums):
-            t = abs(nums[i]-nums[j])
+            t = (nums[j]-nums[i])
             s = min(t,s)
             i+=1
             j+=1
