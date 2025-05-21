@@ -11,14 +11,13 @@ class Solution:
     def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
         dict_a = defaultdict(list)
 
-        def check(node, row, col):
+        def check(node,row,col):
             if not node:
                 return
             dict_a[col].append((row, node.val))
-            check(node.left, row + 1, col - 1)
-            check(node.right, row + 1, col + 1)
-
-        check(root, 0, 0)
+            check(node.left,row+1,col-1)
+            check(node.right,row+1,col+1)
+        check(root,0,0)
 
         res = []
         for col in sorted(dict_a.keys()):
