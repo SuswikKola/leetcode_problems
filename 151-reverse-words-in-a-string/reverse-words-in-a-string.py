@@ -5,4 +5,4 @@ class Solution:
         for i in l:
             if i!="":
                 res = i+" "+res
-        return res[:-1]
+        return res.strip()
