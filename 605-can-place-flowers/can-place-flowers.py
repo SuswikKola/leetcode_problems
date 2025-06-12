@@ -8,6 +8,5 @@ class Solution:
                 if l and r:
                     flowerbed[i]=1
                     c+=1
-                    if c>=n:
-                        return True
+
         return c>=n
