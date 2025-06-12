@@ -1,8 +1,4 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
-        l = list(s.split(" "))
-        res = ""
-        for i in l:
-            if i!="":
-                res = i+" "+res
-        return res.strip()
+        words = [word for word in s.split(" ") if word]
+        return " ".join(reversed(words))
