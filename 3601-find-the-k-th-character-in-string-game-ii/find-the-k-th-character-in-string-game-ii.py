@@ -4,7 +4,7 @@ class Solution:
         for i in operations:
             lens.append(lens[-1]*2)
         shifting = 0
-        for i in reversed(range(len(operations))):
+        for i in range(len(operations)-1,-1,-1):
             curr = lens[i]
             if k>curr:
                 k-=curr
